@@ -83,3 +83,7 @@ function clearForm(){
     //focus on description box
     descriptionBox.focus();
 }
+function checkTime(){
+    const today = new Date().toISOString().split('T')[0];
+    dateBox.min = today;
+}
