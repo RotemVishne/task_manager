@@ -1,0 +1,90 @@
+body{
+    background-image: url(assets/main.jpg);
+    background-size: cover;
+    padding: 30px;
+}
+.formContainer{
+    background-image:url(assets/form.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    max-width: 350px;
+    margin: 0 auto;
+}
+.formContainer button{
+    background-color: deeppink;
+    color: lavenderblush;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    margin: 5px;
+}
+.formContainer button:hover{
+    background-color: lavenderblush;
+    border: deeppink solid 1px;
+    color: deeppink;
+}
+.formContainer button:active{
+    box-shadow: 0.5px 0.5px 0.2px rgba(0, 0, 0, 1);
+    transform: scale(0.98);
+    background-color: lavenderblush !important;
+    border: deeppink solid 1px !important;
+    color: deeppink !important;
+}
+.card{
+    width: 260px;
+    background-image: url(assets/cards.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    animation: fadeIn 1.6s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+.card .description {
+    max-height: 100px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+.card .byTime {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: xx-small;
+    color: #777;
+}
+.delete{
+    opacity: 0;
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.card .delete {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.card:hover .delete{
+    opacity: 1;
+}
+.delete:hover{
+    color: darkred;
+}
+@font-face {
+    font-family: headerFont;
+    src: url(assets/headerFont.ttf);
+}
+h1{
+    font-family: headerFont;
+    text-align: center;
+    color: pink !important;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
+}
